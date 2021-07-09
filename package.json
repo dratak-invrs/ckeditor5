@@ -206,9 +206,5 @@
       "**/husky"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+ 
 }
