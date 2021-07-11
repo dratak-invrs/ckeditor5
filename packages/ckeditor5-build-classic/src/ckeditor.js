@@ -34,6 +34,7 @@ import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -67,6 +68,7 @@ ClassicEditor.builtinPlugins = [
 	HtmlEmbed,
 	IndentBlock,
 	GeneralHtmlSupport,
+	ImageResize,
 ];
 
 // Editor configuration.
