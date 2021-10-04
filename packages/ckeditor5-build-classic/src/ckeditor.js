@@ -36,6 +36,16 @@ import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage';
+import Emoji from '@phudak/ckeditor5-emoji/src/emoji';
+
+import EmojiPeople from "@phudak/ckeditor5-emoji/src/emoji-people";
+import EmojiNature from "@phudak/ckeditor5-emoji/src/emoji-nature";
+import EmojiFood from "@phudak/ckeditor5-emoji/src/emoji-food";
+import EmojiActivity from "@phudak/ckeditor5-emoji/src/emoji-activity";
+import EmojiObjects from "@phudak/ckeditor5-emoji/src/emoji-objects";
+import EmojiPlaces from "@phudak/ckeditor5-emoji/src/emoji-places";
+import EmojiSymbols from "@phudak/ckeditor5-emoji/src/emoji-symbols";
+import EmojiFlags from "@phudak/ckeditor5-emoji/src/emoji-flags";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -71,6 +81,15 @@ ClassicEditor.builtinPlugins = [
 	GeneralHtmlSupport,
 	ImageResize,
 	AutoImage,
+	Emoji,
+    EmojiPeople,
+    EmojiNature,
+    EmojiPlaces,
+    EmojiFood,
+    EmojiActivity,
+    EmojiObjects,
+    EmojiSymbols,
+    EmojiFlags,
 ];
 
 // Editor configuration.
