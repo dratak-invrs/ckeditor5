@@ -47,8 +47,7 @@
     "@ckeditor/ckeditor5-paragraph": "^29.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^29.0.0",
     "@ckeditor/ckeditor5-table": "^29.0.0",
-    "@ckeditor/ckeditor5-typing": "^29.0.0",
-    "@phudak/ckeditor5-emoji": "^1.0.1"
+    "@ckeditor/ckeditor5-typing": "^29.0.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^29.0.0",
