@@ -55,13 +55,14 @@ class InsertGiphy extends Plugin {
             view.set( {
                 label: 'Insert Giphy',
                 icon: imageIcon,
-                tooltip: true
+                tooltip: true,
             } );
 
             // Callback executed once the image is clicked.
             view.on( 'execute', () => {
                 console.log("trigger giphy")
-				const event = new Event('showGiphy');
+				const event = new CustomEvent('showGiphy');
+				event['data'] = view.element;
 				editor.sourceElement.dispatchEvent(event);
             } );
 
