@@ -40,6 +40,35 @@ import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage';
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
 import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
+import imageIcon from './theme/gif.svg';
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+
+class InsertGiphy extends Plugin {
+    init() {
+        console.log( 'InsertGiphy was initialized' );
+        const editor = this.editor;
+
+        editor.ui.componentFactory.add( 'insertGiphy', locale => {
+            const view = new ButtonView( locale );
+
+            view.set( {
+                label: 'Insert Giphy',
+                icon: imageIcon,
+                tooltip: true
+            } );
+
+            // Callback executed once the image is clicked.
+            view.on( 'execute', () => {
+                console.log("trigger giphy")
+				const event = new Event('showGiphy');
+				editor.sourceElement.dispatchEvent(event);
+            } );
+
+            return view;
+        } );
+    }
+}
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -78,6 +107,7 @@ ClassicEditor.builtinPlugins = [
 	SpecialCharacters,
 	SpecialCharactersEssentials,
 	BlockToolbar,
+	InsertGiphy,
 
 ];
 
@@ -102,7 +132,8 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'specialCharacters'
+			'specialCharacters',
+			'insertGiphy',
 			
 		]
 	},

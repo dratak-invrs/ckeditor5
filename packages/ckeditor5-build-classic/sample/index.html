@@ -28,6 +28,7 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
+	document.getElementById("editor").addEventListener('showGiphy', () => {console.log("got showGiphy event")});
 	ClassicEditor.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
