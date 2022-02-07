@@ -156,6 +156,21 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+	mediaEmbed: {
+        previewsInData : true,
+        extraProviders: [
+          {
+             name: 'tiktokProvider',
+             url: /^tiktok\.com\/(\w+)\/video\/(\w+)/,
+             html: match => 
+             `<div style="position:relative; padding-bottom:100%; height:0">
+             <iframe src="https://www.tiktok.com/${match[1]}/video/${match[2]}" frameborder="0"  
+               style="position:absolute; width:100%; height:100%; top:0; left:0">' +
+             </iframe>
+            </div>`
+          }],
+          
+      },
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
