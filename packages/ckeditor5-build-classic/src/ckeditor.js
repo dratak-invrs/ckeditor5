@@ -43,7 +43,7 @@ import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar'
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import imageIcon from './theme/gif.svg';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
+//import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 class InsertGiphy extends Plugin {
     init() {
